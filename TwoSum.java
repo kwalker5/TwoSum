@@ -5,7 +5,7 @@ public class TwoSum {
     public List<Integer> twosum(int[]arr,int sum ){//function to check if any 2 ints in the array are equal to the target sum
         sort(arr);//calling sort function to sort the array
         int left = 0;//setting the left value to the first int in the array at index 0
-        int right = arr.length -1;//setting left value to the last value in the array
+        int right = arr.length -1;//setting right value to the last value in the array
         List<Integer> sumlist = new ArrayList<Integer>();//making a new arraylist to put the values in
         while(left < right){//loop to go through all the values in the array
             if (arr[left] + arr[right] == sum && arr[left] != arr[right]){//check if the two values add up to the target sum and aren't equal
@@ -29,7 +29,7 @@ public class TwoSum {
         int l = arr.length;//int to store the length of the array
         for(int i=0; i<l -1; ++i){//loop to go through all the values in the array
             int min = i;//set min to value of i
-            for(int j=i+1; j <l; j++){//loop to go through the values from i=1 to the end of the array
+            for(int j=i+1; j <l; j++){//loop to go through the values from i+1 to the end of the array
                 if(arr[j]< arr[min]){//if the value at j is greater than the value at min
                     min = j;//set min to equal j
                 }
@@ -43,7 +43,6 @@ public class TwoSum {
 
 
     public static void main(String[] args) {
-        //Scanner input = new Scanner(System.in);
         TwoSum s= new TwoSum();//making an object of twoSum
         int sumarr1[] =new int[]{2, 12, 8, 7};//declaring the first array
         int tsum1 = 9;//setting the first target sum
