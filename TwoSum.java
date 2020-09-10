@@ -28,14 +28,14 @@ public class TwoSum {
     public void sort(int arr[]){//function to sort the array
         int l = arr.length;//int to store the length of the array
         for(int i=0; i<l -1; ++i){//loop to go through all the values in the array
-            int min = i;//set min to value of i
+            int low = i;//set low to value of i
             for(int j=i+1; j <l; j++){//loop to go through the values from i+1 to the end of the array
-                if(arr[j]< arr[min]){//if the value at j is greater than the value at min
-                    min = j;//set min to equal j
+                if(arr[j]< arr[low]){//if the value at j is greater than the value at low
+                    low = j;//set low to equal j
                 }
             }
-            int temp = arr[min];//make a temp int and set it to the value of min
-            arr[min] = arr[i];//set the value of at min to the value at i
+            int temp = arr[low];//make a temp int and set it to the value of low
+            arr[low] = arr[i];//set the value of at low to the value at i
             arr[i] = temp;// set the value at i to the temp
         }
         System.out.println("Sorted array:" +  Arrays.toString(arr));//print the sorted array
